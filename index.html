@@ -48,7 +48,7 @@
 			var isTrue = false;
 
 			//判断版本号是否一致
-			var version = "2.7.4";
+			var version = "2.7.7";
 			//下载进度
 			var dwProgress = 0;
 
@@ -258,7 +258,9 @@
 							msg.thumbs = [share_thumb_img];
 							msg.pictures = [share_img];
 						*/
+						msg.type = ex ? "web" : "text";
 						msg.content = share_content;
+						msg.href = share_href;
 						msg.title = share_title;
 						msg.thumbs = [share_img];
 						msg.pictures = [share_img];
@@ -354,7 +356,6 @@
 						// 	msg.href = share_href;
 						// 	sendMessage();
 						// }
-						msg.href = share_href;
 						sendMessage();
 					}
 				}
